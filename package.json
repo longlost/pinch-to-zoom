@@ -1,0 +1,23 @@
+{
+  "name": "@longlost/pinch-to-zoom",
+  "version": "1.0.0",
+  "description": "A simple wrapper for GoogleChromeLabs/pinch-zoom element which plays nicely within other custom element shadow DOM.",
+  "main": "pinch-to-zoom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longlost/pinch-to-zoom.git"
+  },
+  "author": "Longlost Dev longlostdev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/longlost/pinch-to-zoom/issues"
+  },
+  "homepage": "https://github.com/longlost/pinch-to-zoom#readme",
+  "dependencies": {
+    "@polymer/polymer": "^3.3.1",
+    "pinch-zoom-element": "^1.1.1"
+  }
+}
