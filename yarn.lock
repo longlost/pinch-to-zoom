@@ -2,10 +2,37 @@
 # yarn lockfile v1
 
 
-"@polymer/polymer@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.3.1.tgz#9ad48992d2a96775f80b0673f3a615d6df8a3dfc"
-  integrity sha512-8KaB48tzyMjdsHdxo5KvCAaqmTe7rYDzQAoj/pyEfq9Fp4YfUaS+/xqwYj0GbiDAUNzwkmEQ7dw9cgnRNdKO8A==
+"@longlost/app-element@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@longlost/app-element/-/app-element-2.0.0.tgz#9bae9ac48ce467423ef59400fc3babc95fd07cbe"
+  integrity sha512-Wg9UDMcKnjY+5qA+GC20TMiMYpY8sjNAc/vYgB30x2S96/N7heFb9q0nf5rhoOo3hCpWOecWcVSK9LKv1/ybYw==
+  dependencies:
+    "@longlost/utils" "^1.4.0"
+    "@polymer/polymer" "^3.4.1"
+
+"@longlost/lambda@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@longlost/lambda/-/lambda-2.2.0.tgz#f9ae362590222896d64272df580a281929081051"
+  integrity sha512-hjwZPIcs1FPC1tHG6moCAX0bjtFHIRqVg/jBgsnLhGV0p3Dc0bGo1Z+lGYhEEKZnZFgxhxHY3+PBXw0brgPkPg==
+
+"@longlost/utils@^1.4.0":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@longlost/utils/-/utils-1.5.2.tgz#0b6cf7cb8d14ed72dc283c8c67d1d13dbea1eb3c"
+  integrity sha512-3b0dpEh2/SDkmR1vPMmwAoLdxirMsnZ2b4+vPL+SSvArQ82e0jvmumYenxQTuoPKke5uEDpuXznuiW7WxaurAg==
+  dependencies:
+    "@longlost/lambda" "^2.2.0"
+
+"@longlost/utils@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@longlost/utils/-/utils-2.0.0.tgz#b99c2bb7a93a2b58073451130538b4c99c3b8656"
+  integrity sha512-aXztDGZ2tzIOzy19nYCsWMyZEoXTmb6gxanpqqcFi5WQ3yVGBT7pBubWHg0gTfMdC3zthd7tk2VfQIfgXsZ6kA==
+  dependencies:
+    "@longlost/lambda" "^2.2.0"
+
+"@polymer/polymer@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-3.4.1.tgz#333bef25711f8411bb5624fb3eba8212ef8bee96"
+  integrity sha512-KPWnhDZibtqKrUz7enIPOiO4ZQoJNOuLwqrhV2MXzIt3VVnUVJVG5ORz4Z2sgO+UZ+/UZnPD0jqY+jmw/+a9mQ==
   dependencies:
     "@webcomponents/shadycss" "^1.9.1"
 

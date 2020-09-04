@@ -3,11 +3,11 @@
   * `pinch-to-zoom`
   * 
   *
-  *		A simple wrapper for GoogleChromeLabs/pinch-zoom element
-  * 	to play nicely within other custom element shadow DOM.
+  *   A simple wrapper for GoogleChromeLabs/pinch-zoom element
+  *   to play nicely within other custom element shadow DOM.
   *
   *
-  *		Docs at https://github.com/GoogleChromeLabs/pinch-zoom
+  *   Docs at https://github.com/GoogleChromeLabs/pinch-zoom
   *
   *
   *
@@ -18,15 +18,17 @@
   *
   **/
 
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
-import {htmlLiteral} 					from '@polymer/polymer/lib/utils/html-tag.js';
+import {AppElement, html} from '@longlost/app-element/app-element.js';
+import {htmlLiteral}      from '@polymer/polymer/lib/utils/html-tag.js';
+import {consumeEvent}     from '@longlost/utils/utils.js';
+
 // Disable webpack config 'style-loader' so 
 // these styles are not put in the document head.
 import styles from '!css-loader!pinch-zoom-element/lib/styles.css';
 import 'pinch-zoom-element';
 
 
-class PinchToZoom extends PolymerElement {
+class PinchToZoom extends AppElement {
   static get is() { return 'pinch-to-zoom'; }
 
   static get template() {
@@ -34,24 +36,25 @@ class PinchToZoom extends PolymerElement {
     return html`
       <style>
 
-      	:host {
-      		display: block;
-      	}
+        :host {
+          display: block;
+        }
 
         ${this.stylePartial}
 
         pinch-zoom,
         div {
-        	height: 100%;
+          height: 100%;
         }
 
       </style>
 
 
-      <pinch-zoom id="pz">
-      	<div>
-      		<slot></slot>
-      	</div>
+      <pinch-zoom id="pz" 
+                  on-change="__changeHandler">
+        <div>
+          <slot></slot>
+        </div>
       </pinch-zoom>
 
     `;
@@ -63,22 +66,29 @@ class PinchToZoom extends PolymerElement {
   }
 
 
+  __changeHandler(event) {
+    consumeEvent(event);
+
+    this.fire('pinch-to-zoom-change', this.getTransform());
+  }
+
+
   getTransform() {
-  	return {
-  		scale: this.$.pz.scale,
-  		x: 		 this.$.pz.x,
-  		y: 		 this.$.pz.y
-  	};
+    return {
+      scale: this.$.pz.scale,
+      x:     this.$.pz.x,
+      y:     this.$.pz.y
+    };
   }
 
 
   setTransform(options) {
-  	return this.$.pz.setTransform(options);
+    return this.$.pz.setTransform(options);
   }
 
 
   scaleTo(scale, options) {
-  	return this.$.pz.scaleTo(scale, options);
+    return this.$.pz.scaleTo(scale, options);
   }
 
 }
