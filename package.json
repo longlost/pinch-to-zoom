@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/longlost/pinch-to-zoom#readme",
   "dependencies": {
-    "@longlost/app-element": "^2.0.0",
-    "@longlost/utils": "^2.0.0",
+    "@longlost/app-core": "^1.0.0",
     "@polymer/polymer": "^3.4.1",
     "pinch-zoom-element": "^1.1.1"
   }

@@ -18,9 +18,9 @@
   *
   **/
 
-import {AppElement, html} from '@longlost/app-element/app-element.js';
+import {AppElement, html} from '@longlost/app-core/app-element.js';
 import {htmlLiteral}      from '@polymer/polymer/lib/utils/html-tag.js';
-import {consumeEvent}     from '@longlost/utils/utils.js';
+import {consumeEvent}     from '@longlost/app-core/utils.js';
 
 // Disable webpack config 'style-loader' so 
 // these styles are not put in the document head.
