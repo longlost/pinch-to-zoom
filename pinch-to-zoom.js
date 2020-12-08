@@ -19,12 +19,9 @@
   **/
 
 import {AppElement, html} from '@longlost/app-core/app-element.js';
-import {htmlLiteral}      from '@polymer/polymer/lib/utils/html-tag.js';
 import {consumeEvent}     from '@longlost/app-core/utils.js';
-
-// Disable webpack config 'style-loader' so 
-// these styles are not put in the document head.
-import styles from '!css-loader!pinch-zoom-element/lib/styles.css';
+import {htmlLiteral}      from '@polymer/polymer/lib/utils/html-tag.js';
+import styles             from 'pinch-zoom-element/lib/styles.css';
 import 'pinch-zoom-element';
 
 
